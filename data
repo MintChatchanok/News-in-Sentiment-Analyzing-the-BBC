@@ -1,0 +1,6 @@
+# Loading data
+bbc_data = pd.read_csv('bbc_data.csv')
+pd.read_table('bbc_data.csv', sep=',')
+
+# Check data, labels, null values, and type
+bbc_data.info()
