@@ -1,4 +1,4 @@
-# News-in-Sentiment-Analyzing-the-BBC
+# 📰 News in Sentiment Analyzing the BBC
 A Data Programming Project on Sentiment Analysis Across News Categories
 
 This project explores how sentiment varies across different BBC News article categories using a custom-built data programming pipeline in Python. We investigate whether topics like politics, tech, sports, and entertainment exhibit distinct sentiment profiles—and what that reveals about media tone and bias.
