@@ -1,0 +1,35 @@
+accuracies = {
+    "Naive Bayes": accuracy_score(y_test, y_pred_nb),
+    "SVM": accuracy_score(y_test, y_pred_svm),
+    "Logistic Regression": accuracy_score(y_test, y_pred_log_reg)
+}
+
+#Customised the chart
+color = ['blue', 'purple', 'red']
+plt.bar(accuracies.keys(), accuracies.values(), color=color, alpha=0.7)
+
+plt.xlabel("Model")
+plt.ylabel("Accuracy")
+plt.title("Model Accuracy Comparison")
+
+#Set y-axis and tick in percentage
+plt.ylim(0, 1)
+plt.yticks([i / 10 for i in range(11)], [f"{i*10}%" for i in range(11)]) 
+
+plt.show()
+
+# Create a top 10 frequent word cloud for a specific sentiment
+def plot_wordcloud(data, sentiment_label, title):
+    text = ' '.join(data[data['sentiment'] == sentiment_label]['cleaned_data'])
+    wordcloud = WordCloud(max_font_size=50, max_words=30, background_color="black").generate(text)
+    
+    plt.figure()
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    plt.title(title, fontsize=20)
+    plt.show()
+
+# Generate word clouds for each sentiment
+plot_wordcloud(bbc_data, 'positive', "Wordcloud for Positive Sentiment")
+plot_wordcloud(bbc_data, 'negative', "Wordcloud for Negative Sentiment")
+plot_wordcloud(bbc_data, 'neutral', "Wordcloud for Neutral Sentiment")
