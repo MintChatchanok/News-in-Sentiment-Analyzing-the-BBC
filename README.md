@@ -31,5 +31,5 @@ python src/classifier.py </pre>
 
 # Output
 
-📊 Sentiment distributions per category (positive/neutral/negative)
-📈 Word clouds and frequency plots by sentiment tone
+- Sentiment distributions per category (positive/neutral/negative)
+- Word clouds and frequency plots by sentiment tone
